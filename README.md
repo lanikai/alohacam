@@ -19,5 +19,7 @@ The AlohaCam Beta software currently supports Raspberry Pi 3B+ boards. We'll let
 # How do I get started?
 You'll need a Raspberry Pi 3B+ development kit, a real email address, and a sense of adventure! You can sign up for early access to the Beta _here_. 
 
-[Privacy Policy](https://docs.google.com/document/d/1r7gZ9G3Kuca0KCxV8fvlmwra4bZs2r0PpcCehzjCC1M/edit#heading=h.ved6qrer4vv5)
-[Terms of Service](https://docs.google.com/document/d/1ggXi00roHuMhiFbjrkJ4p7kJ4yFDY4dZuMxTV3urZeo/edit#)
+# What else do I need to know? 
+We know no one reads these, but just in case... 
+<br> [Privacy Policy](https://docs.google.com/document/d/1r7gZ9G3Kuca0KCxV8fvlmwra4bZs2r0PpcCehzjCC1M/edit#heading=h.ved6qrer4vv5)
+<br> [Terms of Service](https://docs.google.com/document/d/1ggXi00roHuMhiFbjrkJ4p7kJ4yFDY4dZuMxTV3urZeo/edit#)
