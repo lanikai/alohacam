@@ -1,4 +1,4 @@
-A beginner's guide to Alohacam:
+# A beginner's guide to Alohacam:
 
 * If you haven't already, request a Beta invite [here](https://lanikailabs.com/alohacam).
 
