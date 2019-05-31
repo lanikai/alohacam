@@ -14,7 +14,7 @@
 
 * Your Raspberry Pi will now download and run the Alohacam executable. This may take a minute, so be patient :)
 
-*** ___ Do they also need to add in a unique ID//code to register the device?? __ 
+* ___ Do they also need to add in a unique ID//code to register the device?? __ 
 
 * Once you've run the executable and registered the device (?? Is this described correctly??), click Next. 
 
