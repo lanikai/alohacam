@@ -20,9 +20,9 @@ After the Alohacam Beta wraps, we will still offer peer-to-peer (non-TURN) one-w
 The Alohacam Beta software currently supports Raspberry Pi development boards. We'll let you know as we release support for more development boards (looking at you, Jetson Nano!) – so stay tuned. 
 
 # Who can view Alohacam? 
-Short answer: Security is our top priority. Alohacam uses WebRTC, and the entire interaction is encrypted. This means that (unlike some IoT solutions) only you can view your Alohacam!
+**Short answer**: Security is our top priority. Alohacam uses WebRTC, and the entire interaction is encrypted. This means that (unlike some IoT solutions) only you can view your Alohacam!
 
-Longer answer: We use client side SSL/TLS encryption. The Alohacam install script will auto-generate a certificate for your device. This certificate never leaves your device – we don't store it or have access to it – and you can even use your own. When a connection to your device is initiated, your browser will create a dynamic certificate (through DHE key exchange) that is valid only for that session. Both certificates use X.509 standards. We designed these security measures to ensure that only you will be able to view your Alohacam!
+**Longer answer**: We use client side SSL/TLS encryption. The Alohacam install script will auto-generate a certificate for your device. This certificate never leaves your device – we don't store it or have access to it – and you can even use your own. When a connection to your device is initiated, your browser will create a dynamic certificate (through DHE key exchange) that is valid only for that session. Both certificates use X.509 standards. We designed these security measures to ensure that only you will be able to view your Alohacam!
 
 # Is this MJPEG or H.264?
 Alohacam is powered by a WebRTC native library. The video you're seeing is from the hardware-accelerated H.264 byte-stream.
@@ -43,7 +43,7 @@ We're glad you like Alohacam! We're not planning a public release of our code ba
 Excellent – we can't wait to hear it! Send us a note at aloha@lanikailabs.com! 
 
 # Help! I can't get this to work!
-Shoot us an email at aloha@lanikailabs.com, and we'll help you out! 
+Here's a step-by-step [guide](/GUIDE.md) to walk you through the setup process. If you're still running into issues, shoot us an email at aloha@lanikailabs.com! 
 
 # What else do I need to know? 
 We know no one reads these, but just in case... 
