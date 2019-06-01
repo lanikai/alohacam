@@ -22,7 +22,7 @@ After you have successfully run the executable on your Raspberry Pi, click Done.
 
 ![6](images/6.png)
 
-From here, you can view your device's live video stream! You'll also find the controls to pause and play the video, delete the device, and enter full screen mode.
+You can now view your device's live video stream! You'll also find the controls to pause and play the video, enter full screen mode, or delete the device.
 <br> 
 <br> 
 Keep in mind that if you unplug or power down your Raspberry Pi, you'll need to re-run the `./alohacam` command upon boot to restart Alohacam. 
