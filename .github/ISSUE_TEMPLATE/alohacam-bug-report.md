@@ -1,7 +1,7 @@
 ---
 name: Alohacam Bug Report
 about: 'Create a bug report to help us improve Alohacam! '
-title: "[Bug Report – DESCRIPTION]"
+title: "[Bug Report – *DESCRIPTION*]"
 labels: ''
 assignees: ''
 
