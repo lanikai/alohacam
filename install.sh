@@ -1,15 +1,16 @@
 #!/bin/bash -e
 
 # Check for dependencies.
-hash curl openssl
+hash curl grep openssl
 
-DASHBOARD_URL=https://alohacam.lanikailabs.com
-API_URL=https://api.alohacam.lanikailabs.com
-DOWNLOAD_URL=https://download.alohacam.lanikailabs.com
+DASHBOARD_URL=https://alohacam.io
+API_URL=https://api.alohacam.io
+DOWNLOAD_URL=http://get.alohacam.io
 VERSION=latest
 KEYFILE=key.pem
 CERTFILE=cert.pem
 CSRFILE=req.pem
+REBOOT_REQUIRED=false
 
 [ -e lanikai.env ] && source lanikai.env
 
@@ -76,5 +77,28 @@ if [ ! -e $CERTFILE ]; then
     fi
 fi
 
+# Load v4l2 driver on boot (if not already enabled).
+if ! grep -q "^bcm2835-v4l2$" /etc/modules; then
+    echo "Modifying /etc/modules to enable camera driver (requires sudo)"
+    sudo sh -c 'echo "bcm2835-v4l2" >> /etc/modules'
+fi
+echo "Loading camera driver (requires sudo)"
+sudo modprobe bcm2835-v4l2
 
-# TODO: Identify camera type, load kernel modules, install systemd service.
+# Ensure Raspberry Pi bootloader configured to enable camera.
+if ! grep -q "^start_x=1$" /boot/config.txt; then
+    echo "Modifying /boot/config.txt to enable camera (requires sudo)"
+    sudo sh -c 'echo "start_x=1" >> /boot/config.txt'
+    REBOOT_REQUIRED=true
+fi
+
+# Reboot prompt.
+if $REBOOT_REQUIRED; then
+    echo "Some changes require you to reboot your Raspberry Pi."
+    read -p "Reboot now (y/N)? " yesno
+    case $yesno in
+        [Yy]* ) sudo reboot;
+    esac
+else
+    ./alohacam
+fi
