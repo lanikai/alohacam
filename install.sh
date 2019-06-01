@@ -55,7 +55,7 @@ fi
 if [ ! -e $CERTFILE ]; then
     if [ -z "$TOKEN" ]; then
         echo "Visit the Alohacam dashboard to obtain an activation token for this device:"
-        echo "    $DASHBOARD_URL/devices/activate"
+        echo "    $DASHBOARD_URL/devices/"
         while [ -z "$TOKEN" ]; do
             read -r -p "Enter activation token: "
             TOKEN=$(echo "$REPLY" | tr -cd '0-9A-Za-z')
