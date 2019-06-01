@@ -10,16 +10,17 @@
 
 * Choose a name for your Alohacam (like "Moana") and click Next. 
 
-* The modal will now display a ____*Code? Executable? Command? What should I call this guy?*___. Copy this, and run it on your Raspberry Pi. 
+* The modal will now display a command with a unique token. Copy this entire command, and run it on your Raspberry Pi in `$HOME`.
 
 * Your Raspberry Pi will now download and run the Alohacam executable. This may take a minute, so be patient :)
+     – If you are prompted to reboot your Pi during this process, choose Yes. Once your Pi reboots and is reconnected to the Internet, run the command ./alohacam to start Alohacam. 
 
-* ___*Do they also need to add in a unique ID//code to register the device??* __ 
-
-* Once you've run the executable and registered the device (*Is this described correctly??*), click Next. 
+* After your Pi has downloaded executable and registered the device, click Next. 
 
 * You should now be back at the main page, where you can see your Alohacam. 
 
 * From this page, you can control your device's live video. Connect to the device, pause, play, full screen, and picture in picture modes are all available from here. 
 
 * If you run into any issues or still have questions, reach out to us at aloha@lanikailabs.com! 
+
+(for Beta, they will need to re-run ./alohacam to bring the service back up) 
