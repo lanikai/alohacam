@@ -38,10 +38,3 @@ If applicable, add screenshots to help explain your problem.
 **Additional context**
 Any other context about the problem that you think would be helpful. 
 
-
-<br>
-<br>
-<br>
-Thank you for reporting this issue! <br>
-❤️<br>
-Lanikai Labs
