@@ -43,7 +43,10 @@ We're glad you like Alohacam! We're not planning a public release of our code ba
 Excellent – we can't wait to hear it! Send us a note at aloha@lanikailabs.com! 
 
 # Help! I can't get this to work!
-Here's a step-by-step [guide](/GUIDE.md) to walk you through the setup process. If you're still running into issues, shoot us an email at aloha@lanikailabs.com! 
+Here's a step-by-step [guide](/GUIDE.md) to walk you through the setup process. If you're still running into issues, shoot us an email at aloha@lanikailabs.com!
+
+# I accidentally deleted my device and can't re-add it! 
+Whoops! No worries – just run `rm cert.pem` on your device to clear the original certificate. Now you should be able to re-add it! Reach out to us at aloha@lanikailabs.com if you're still having issues. 
 
 # What else do I need to know? 
 We know no one reads these, but just in case... 
