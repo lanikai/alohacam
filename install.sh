@@ -31,6 +31,8 @@ if [ -z "$ARCH" ]; then
             ARCH=armv6 ;;
         armv7*)
             ARCH=armv7 ;;
+        aarch64*)
+            ARCH=aarch64 ;;
         *)
             echo "Unsupported architecture: $(uname -m)"
             exit 1 ;;
@@ -89,8 +91,10 @@ if ! grep -q "^bcm2835-v4l2$" /etc/modules; then
     echo "Modifying /etc/modules to enable camera driver (requires sudo)"
     sudo sh -c 'echo "bcm2835-v4l2" >> /etc/modules'
 fi
-echo "Loading camera driver (requires sudo)"
-sudo modprobe bcm2835-v4l2
+if ! lsmod | grep -q "^bcm2835_v4l2"; then
+    echo "Loading camera driver (requires sudo)"
+    sudo modprobe bcm2835-v4l2
+fi
 
 # Ensure Raspberry Pi bootloader configured to enable camera.
 if ! grep -q "^start_x=1$" /boot/config.txt; then
