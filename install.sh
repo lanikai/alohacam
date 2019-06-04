@@ -6,7 +6,7 @@ hash curl grep openssl
 DASHBOARD_URL=https://alohacam.io
 API_URL=https://api.alohacam.io
 DOWNLOAD_URL=http://get.alohacam.io
-VERSION=0.1.0
+VERSION=latest
 KEYFILE=key.pem
 CERTFILE=cert.pem
 CSRFILE=req.pem
