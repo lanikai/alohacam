@@ -6,7 +6,7 @@ hash curl grep openssl
 DASHBOARD_URL=https://alohacam.io
 API_URL=https://api.alohacam.io
 DOWNLOAD_URL=http://get.alohacam.io
-VERSION=latest
+VERSION=0.1.0
 KEYFILE=key.pem
 CERTFILE=cert.pem
 CSRFILE=req.pem
@@ -39,8 +39,15 @@ fi
 
 # Download latest alohacam binary.
 if [ -z "$SKIP_DOWNLOAD" ]; then
-    curl -o alohacam $DOWNLOAD_URL/release/$VERSION/alohacam-$PLAT-$ARCH
+    curl -L -o alohacam $DOWNLOAD_URL/release/$VERSION/alohacam-$PLAT-$ARCH
     chmod a+x alohacam
+fi
+
+# Install rng-tools to ensure have sufficient entropy for certificates
+if [ ! -e /usr/sbin/rngd ]; then
+    echo "Installing rng-tools to ensure sufficient entropy for generating"
+    echo "certificates (requires sudo)."
+    sudo apt-get install -y rng-tools
 fi
 
 # Generate a private key, if we don't already have one.
