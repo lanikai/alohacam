@@ -10,7 +10,7 @@ The main Alohacam webpage should now be displaying the "Add your first device" m
 
 ![2](images/2.png)
  
-The modal will now display a command with a unique token. Copy this entire command, and run it on your Raspberry Pi in `$HOME`.
+The modal will now display a command with a unique token. Copy this entire command, and run it on your Raspberry Pi in `$HOME`. Note that the token is only valid for 60 minutes -- if the command is not run within this run, a new token will need to be generated (click 'Cancel' and then the 'Activate' button).
 
 ![3](images/3.png)
 
